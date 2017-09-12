@@ -44,4 +44,20 @@ a:link, a:visited, a:hover, a:active {
       vertical-align: -5px;
     }
   }
+  .description {
+    margin: 10px;
+    line-height: 1.6
+  }
+  & > a {
+    display: block;
+    margin: -8px -8px -11px;  // click領域確保用
+    padding: 8px 8px 11px;
+    border-radius: inherit;  // 角丸を親要素から引き継ぐ
+    color: #777;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0 0 6px -1px rgba(0, 0 ,0 , 0.3);
+      opacity: 0.8;
+    }
+  }
 }
