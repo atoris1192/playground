@@ -17,3 +17,31 @@ a:link, a:visited, a:hover, a:active {
   color: #7c5119;
   text-decoration: none;
 }
+.item {
+  width: 180px;
+  margin-bottom: 4px;
+  padding: 8px;
+  border-bottom: 3px solid;
+  border-radius: 5px;
+  background-color: #fff;
+  .image {
+    display: block;
+    width: 100%;
+  }
+  .category {
+    margin: 15px 9px 10px;
+    color: #aaa;
+    letter-spacing: 1px;
+    font-family: "Trebuchet MS", "Hiragino Kaku Gothic PronN", Meiryo, sans-serif;
+    &::before {  // カテゴリーサークル
+      content: '';
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      margin-right: 5px;
+      border: 2px solid;
+      border-radius: 50%;
+      vertical-align: -5px;
+    }
+  }
+}
