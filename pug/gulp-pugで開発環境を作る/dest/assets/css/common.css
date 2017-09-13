@@ -31,6 +31,7 @@ a:link, a:visited, a:hover, a:active {
 .item .image {
   display: block;
   width: 100%;
+  height: 109px;
 }
 
 .item .category {
@@ -100,4 +101,20 @@ a:link, a:visited, a:hover, a:active {
 
 .item.item-breaktime .category::before {
   border-color: #c1efff;
+}
+
+.item.item-m {
+  width: 364px;
+}
+
+.item.item-m .image {
+  height: 146px;
+}
+
+.item.item-l {
+  width: 732px;
+}
+
+.item.item-l .image {
+  height: 403px;
 }

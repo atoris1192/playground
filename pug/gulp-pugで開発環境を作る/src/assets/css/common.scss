@@ -27,6 +27,7 @@ a:link, a:visited, a:hover, a:active {
   .image {
     display: block;
     width: 100%;
+    height: 109px; // 画像くずれ防止
   }
   .category {
     margin: 15px 9px 10px;
@@ -83,6 +84,18 @@ a:link, a:visited, a:hover, a:active {
     border-color: #c1efff;
     .category::before {
       border-color: #c1efff;
+    }
+  }
+  &.item-m { // M size
+    width: 364px;
+    .image {
+      height: 146px; // 画像くずれ防止
+    }
+  }
+  &.item-l { // L size
+    width: 732px;
+    .image {
+      height: 403px;
     }
   }
 }
