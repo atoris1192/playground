@@ -118,3 +118,51 @@ a:link, a:visited, a:hover, a:active {
 .item.item-l .image {
   height: 403px;
 }
+
+.header {
+  padding: 25px 0;
+  border-bottom: none;
+  text-align: center;
+}
+
+.header .logo {
+  width: 136px;
+  height: 136px;
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.header .logo:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.header .nav {
+  margin: 35px auto 10px;
+}
+
+.header .nav .nav-item {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.header .nav a {
+  display: inline-block;
+}
+
+.header .nav a::after {
+  content: '';
+  display: block;
+  width: block;
+  width: 0;
+  margin: 6px auto 0;
+  border-bottom: 1px solid #7c5119;
+  transition: width 0.3s ease-in-out;
+}
+
+.header .nav a:hover::after {
+  width: 100%;
+}
