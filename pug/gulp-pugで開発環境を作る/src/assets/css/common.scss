@@ -60,4 +60,29 @@ a:link, a:visited, a:hover, a:active {
       opacity: 0.8;
     }
   }
+  &.item-maindish {
+    border-color: #ffc0cb;
+    .category::before {
+      border-color: #ffc0cb;
+    }
+  }
+  &.item-appetizer {
+    border-color: #76c047;
+    .category::before {
+      border-color: #76c047;
+    }
+  }
+  &.item-column {
+    border-color: #fff100;
+    .category::before {
+      border-color: #fff100;
+    }
+  }
+
+  &.item-breaktime {
+    border-color: #c1efff;
+    .category::before {
+      border-color: #c1efff;
+    }
+  }
 }
