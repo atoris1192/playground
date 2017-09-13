@@ -4,12 +4,20 @@ html(lang="ja")
     meta(charset="utf-8")
     title シングルページレイアウト
     link(rel="stylesheet" href="css/nomalize.css")
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">  
+    link(href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet") 
     link(rel="stylesheet" href="css/style.css")
   body
     header.header
-    section.about
+      p.site-title-sub Web designer's portfolio
+      h1.site-title HI , MY NAME IS ...
+      p.site-description Check out some of my works.
+      .buttons
+        a.button(href="#about") LEARN MORE
+        a.button-showy(href="contact") SEND MESSAGE 
+        //- a.button.button-showy(href="contact") SEND MESSAGE 
+        //- extend指定で,マルチクラス指定を省略
+    section.about#about
     section.works
     section.skills
-    section.contact
+    section.contact#contact
     footer.footer

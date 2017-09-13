@@ -8,9 +8,61 @@ html {
 
 body {
   background: #151515 url("../images/bg.png") no-repeat fixed left bottom;
-  background-size: cober;
+  background-size: cover;
   color: #fff;
   text-align: center;
   font-size: 1.4rem;
-  font-family: Raleway "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.header {
+  padding: 170px 30px 80px;
+}
+
+.header .site-title-sub {
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  font-size: 2.2rem;
+}
+
+.header .site-title-sub::before, .header .site-title-sub::after {
+  content: '';
+  display: inline-block;
+  width: 140px;
+  height: 2px;
+  margin: 0 30px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+.header .site-title {
+  margin: 50px 0 40px;
+  font-size: 7.6rem;
+}
+
+.header .site-description {
+  margin-bottom: 50px;
+  color: #888;
+  font-size: 1.6rem;
+}
+
+.header .buttons .button, .header .buttons .button-showy {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #afa58d;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin: 10px;
+}
+
+.header .buttons .button:hover, .header .buttons .button-showy:hover {
+  opacity: 0.9;
+}
+
+.header .buttons .button-showy {
+  background-color: #f1b400;
 }
