@@ -61,3 +61,32 @@ body {
     }
   }
 }
+.about {
+  padding: 80px 30px;
+  background-color: #fff;
+  color: #333;
+  .heading {
+    position: relative;
+    margin: 30px 0 15px;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    display: inline-block; // 二重線の幅指定
+    padding-bottom: 15px;  // 二重線との距離
+    &::before,
+    &::after { // 二重線
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0; // 最下部に配置
+      left: 0;
+      border-bottom: 1px solid #999;
+    }
+    &::before {
+      bottom: 5px;
+    }
+  }
+  .about-text {
+    margin: 30px 0;
+    line-height: 2.5;
+  }
+}
