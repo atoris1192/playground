@@ -86,10 +86,17 @@ html(lang="ja")
         .skill-box
           .skill-icon.fa.fa-code
           .skill-title CODING
-          p.skill-text
-            | HTML/CSSのコーディングも行います。 <br>
-            | 正しく美しいマークアップと、 <br>
-            | 今後の変更への強さを考慮しています。 <br>
+          p.skill-text.
+            HTML/CSSのコーディングも行います。 <br>
+            正しく美しいマークアップと、 <br>
+            今後の変更への強さを考慮しています。 <br>
             
     section.contact#contact
+      h2.heading CONTACT
+      form.contact-form
+        input(type="text" name="name" placeholder="NAME")
+        textarea(name="message" placeholder="MESSAGE" )
+        input(type="submit" value="SEND")
+      
     footer.footer
+    script(src="lib/placeholders.min.js")
