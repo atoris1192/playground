@@ -2,6 +2,7 @@ doctype html
 html(lang="ja")
   head
     meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0")
     title シングルページレイアウト
     link(rel="stylesheet" href="css/nomalize.css")
     link(href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet") 
@@ -14,7 +15,7 @@ html(lang="ja")
       p.site-description Check out some of my works.
       .buttons
         a.button(href="#about") LEARN MORE
-        a.button-showy(href="contact") SEND MESSAGE 
+        a.button-showy(href="#contact") SEND MESSAGE 
         //- a.button.button-showy(href="contact") SEND MESSAGE 
         //- extend指定で,マルチクラス指定を省略
     section.about#about
@@ -98,6 +99,5 @@ html(lang="ja")
         textarea(name="message" placeholder="MESSAGE" )
         input(type="submit" value="SEND")
       
-    footer.footer.
-      © sample
+    footer.footer
     script(src="lib/placeholders.min.js")
