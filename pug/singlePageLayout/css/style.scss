@@ -29,8 +29,29 @@ body {
   }
 }
 .button-showy {
-  @extend .button;  // .button を読み込み multi classの省略の為
+  @extend .button;  // .button を読み込み maluchi classの省略の為
   background-color: #f1b400;
+}
+
+.heading {  // 見出し共通
+  position: relative;
+  margin: 30px 0 15px;
+  letter-spacing: 1px;
+  font-size: 4rem;
+  display: inline-block; // 二重線の幅に影響
+  padding-bottom: 15px;  // 二重線までのpx
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #999;
+  }
+  &::before {
+    bottom: 5px; // 二重線の幅
+  }
 }
 
 .header {
@@ -64,5 +85,15 @@ body {
     .button-showy {
       margin: 10px;
     }
+  }
+}
+
+.about {  // 自己紹介
+  padding: 80px 30px;
+  background-color: #fff;
+  color: #333;
+  .about-text { // パラグラフ 二段
+    margin: 30px 0;
+    line-height: 2.5;
   }
 }

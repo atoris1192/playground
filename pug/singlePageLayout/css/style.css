@@ -35,6 +35,28 @@ body {
   background-color: #f1b400;
 }
 
+.heading {
+  position: relative;
+  margin: 30px 0 15px;
+  letter-spacing: 1px;
+  font-size: 4rem;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.heading::before, .heading::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #999;
+}
+
+.heading::before {
+  bottom: 5px;
+}
+
 .header {
   padding: 170px 30px 80px;
 }
@@ -69,4 +91,15 @@ body {
 .header .buttons .button, .header .buttons .button-showy,
 .header .buttons .button-showy {
   margin: 10px;
+}
+
+.about {
+  padding: 80px 30px;
+  background-color: #fff;
+  color: #333;
+}
+
+.about .about-text {
+  margin: 30px 0;
+  line-height: 2.5;
 }
