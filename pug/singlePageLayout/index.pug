@@ -8,8 +8,21 @@ html(lang="ja")
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
   body
     header.header
-    section.about
+      p.site-title-sub.
+        Web designer's portfolio
+      h1.site-title.
+        HI, MY NAME IS ...
+      p.site-description.
+        Check out some of my works.
+      .buttons
+        a.button(href="#about").
+          LEARN MORE
+        //- a.button.button-showy(href="#contact"). @extend変更
+        a.button-showy(href="#contact").
+          SEND MESSAGE
+        
+    section.about#about
     section.works
     section.skills
-    section.contact
+    section.contact#contact
     footer.footer
