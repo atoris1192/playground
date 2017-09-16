@@ -38,7 +38,7 @@ body {
   margin: 30px 0 15px;
   letter-spacing: 1px;
   font-size: 4rem;
-  display: inline-block; // 二重線の幅に影響
+  display: inline-block; // 二重線の幅に影響 マージンの相殺は起こらない
   padding-bottom: 15px;  // 二重線までのpx
   &::before,
   &::after {
@@ -95,5 +95,87 @@ body {
   .about-text { // パラグラフ 二段
     margin: 30px 0;
     line-height: 2.5;
+  }
+}
+
+.works {
+  background-color: #383634;
+  padding: 80px 0;
+  .works-wrapper {
+    display: table;
+    width: 100%;
+    margin-top: 60px;
+    table-layout: fixed; // 横幅を均等にする
+    .work-box {
+      position: relative;
+      display: table-cell;
+      &::after {  // 反射画像の設定
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        // background: url('../images/tree.jpg') no-repeat;
+        background-size: 100% 100%;
+        opacity: 0.2;
+        transform: scaleY(-1);  // 反転
+      }
+      &.tree::after {
+        background-image: url('../images/tree.jpg');
+      }
+      &.building::after {
+        background-image: url('../images/building.jpg');
+      }
+      &.lake::after {
+        background-image: url('../images/lake.jpg');
+      }
+      &.sky::after {
+        background-image: url('../images/sky.jpg');
+      }
+      .work-image {
+        display: block;
+        width: 100%;
+        margin: 0 0 60%;  // 画像の比率から下方向に領域確保
+      }
+      &:nth-child(odd) .work-image { // 奇数反転
+        margin: 60% 0 0; // imgのトップにマージン確保
+      }
+      .work-description {  // img と sibling
+        // margin-bottom: 60%と同じ大きさ
+        position: absolute;
+        top: 50%;  // absolute で　work-boxの下半分指定
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: 1; // 重なり優先順位変更
+        overflow-y: auto;  // y方向のみスクロール設定
+        .work-description-inner {
+          display: table;
+          width: 100%;
+          height: 100%;
+          padding: 20px;
+          .work-text {  // 制作事例 ~ READ MORE
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 1.2rem;
+            line-height: 2;
+            .button {  // READ MORE
+              width: 60%;
+              margin-top: 20px;
+              padding: 3px;
+            }
+            .button-ghost {  // ボタンゴースト表示
+              border: 1px solid #fff;
+              background-color: rgba(255, 255, 255, 0.15);
+            }
+          }
+        }
+      }
+      &:nth-child(odd) .work-description,
+      &::after {
+        top: 0; // absoluteで確保されている反射画像、top 0で表示
+      }
+    }
   }
 }
